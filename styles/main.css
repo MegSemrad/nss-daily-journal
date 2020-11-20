@@ -1,0 +1,18 @@
+.journalEntryForm {
+    flex-direction: column;
+}
+
+.date {
+    display: flex;
+}
+
+.conceptsCovered {
+    display: flex;
+}
+.journalEntry {
+    display: flex;
+}
+.mood {
+    display: flex;
+}
+
