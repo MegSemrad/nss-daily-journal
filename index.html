@@ -13,7 +13,7 @@
 <body>
     
     <header>
-        <div><h2 class="title">Daily Journal</h2></div>
+        <div><img src="./images/logo.png" alt="logo with name Daily Journal" class="logo"></div>
     </header>
 
     <form action="" class="journalEntryForm">
@@ -54,6 +54,8 @@
         <input type="submit" value="Record Journal Entry" class="recordButton">
     </form>
     
+    <!-- In the below section is where the individual entries will be placed 
+        after being automated by Java -->
     <section>
         <div class="individualEntry"> 
         </div>
@@ -63,6 +65,11 @@
 <script type="module" src="scripts/main.js"></script>
 </body>
 
-<footer>copyright 2020 Meghan S., LLC</footer>
+<footer class="parentFooter">
+    <div class="childOfFooter">
+        <div><a href="https://github.com/MegSemrad" class="githubLink">Checkout my Github!</a></div>
+        <div class="copyright">copyright 2020 Meghan S., LLC</div>
+    </div>
+</footer>
 
 </html>
