@@ -10,20 +10,45 @@ display: block;
     flex-direction: column;
 }
 
+
 .date {
     display: flex;
 }
 
+
+.date__label {
+    font-family: 'Sawarabi Mincho', sans-serif;
+}
+
+
+.date__input {
+    font-family: 'Sawarabi Mincho', sans-serif;  
+}
+
 .conceptsCovered {
     display: flex;
+    font-family: 'Sawarabi Mincho', sans-serif;
 }
 .journalEntry {
     display: flex;
 }
+
+.journalEntry__label{
+    font-family: 'Sawarabi Mincho', sans-serif; 
+}
+
 .mood {
     display: flex;
 }
 
+.mood__label {
+    font-family: 'Sawarabi Mincho', sans-serif;   
+}
+
+.recordButton {
+    font-family: 'Sawarabi Mincho', sans-serif; 
+    margin: 12px 0px;
+}
 
 .parentFooter {
     position: relative;
