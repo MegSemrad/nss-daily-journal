@@ -4,20 +4,38 @@
  *    there are items in the collection exposed by the
  *    data provider component
  */
-import { getEntries, useEntries } from "./JournalDataProvider.js"
-import { JournalEntryComponent } from "./JournalEntry.js"
+import { getEntries, useEntries } from "./JournalDataProvider.js";
+import { JournalEntryComponent } from "./JournalEntry.js";
 
 // DOM reference to where all entries will be rendered
-const entryLog = document.querySelector(".individualEntry")
+const entryLog = document.querySelector(".individualEntry");
+const eventHub = document.querySelector(".container");
 
-export const EntryListComponent = () => {
-    // Use the journal entry data from the data provider component
-    getEntries()
-    const entries = useEntries()
+eventHub.addEventListener(".entryStateChanged", () => {
+    EntryList()
+});
 
-    for (const entryObject of entries) {
-       console.log(entryObject)
-       const entryHTML = JournalEntryComponent(entryObject)
-        entryLog.innerHTML += entryHTML
-    }
+const render = (entryArray) => {
+    const allEntriesConvertedToString = entryArray.map((entry) => JournalEntryComponent(entry)).join("")
+    contentTarget.innerHTML = allEntriesConvertedToString
 }
+
+export const EntryList = () => {
+    getEntries()
+        .then(() => {
+            const allEntries = useEntries()
+            render(allEntries)
+        })
+};
+
+// export const EntryListComponent = () => {
+//     // Use the journal entry data from the data provider component
+//     getEntries()
+//     const entries = useEntries()
+
+//     for (const entryObject of entries) {
+//        console.log(entryObject)
+//        const entryHTML = JournalEntryComponent(entryObject)
+//         entryLog.innerHTML += entryHTML
+//     }
+// };
