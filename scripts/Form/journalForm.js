@@ -61,6 +61,6 @@ const render = () => {
 };
 
 
-export const entryForm = () => {
+export const JournalFormComponent = () => {
     render()
 };
