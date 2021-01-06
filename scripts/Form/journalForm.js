@@ -1,4 +1,4 @@
-import { saveEntry } from './JournalDataProvider.js';
+import { saveEntry } from '../JournalDataProvider.js';
 
 const eventHub = document.querySelector(".container");
 const contentTarget = document.querySelector(".journalEntryForm");
