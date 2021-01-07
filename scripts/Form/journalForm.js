@@ -13,6 +13,21 @@ eventHub.addEventListener("click", clickEvent => {
     if(clickEvent.target.id === "recordButton") {
         // clickEvent.preventDefault()
 
+        const date = document.querySelector("#journalDate").value
+        const concepts = document.querySelector(".conceptsCovered__input").value
+        const entry = document.querySelector("#journalEntry").value
+        const mood = document.querySelector(".mood__selector").value
+
+        const newEntry = {
+            date: date,
+            concepts: concepts,
+            entry: entry,
+            mood: mood
+        }
+
+        saveEntry(newEntry)
+    }
+}); 
 
 
 // ----------------------------------------------------------------------------------------------------------------
@@ -71,6 +86,7 @@ const render = () => {
 export const JournalFormComponent = () => {
     render()
 };
+
 
 
 
