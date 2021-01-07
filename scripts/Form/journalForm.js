@@ -5,6 +5,7 @@ const contentTarget = document.querySelector(".journalEntryForm");
 
 eventHub.addEventListener("click", clickEvent => {
     if(clickEvent.target.id === "recordButton") {
+        // clickEvent.preventDefault()
 
         const date = document.querySelector("#journalDate").value
         const concepts = document.querySelector(".conceptsCovered__input").value
