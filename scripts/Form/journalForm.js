@@ -9,6 +9,10 @@ import { saveEntry } from '../JournalDataProvider.js';
 const eventHub = document.querySelector(".container");
 const contentTarget = document.querySelector(".journalEntryForm");
 
+eventHub.addEventListener("click", clickEvent => {
+    if(clickEvent.target.id === "recordButton") {
+        // clickEvent.preventDefault()
+
 
 
 // ----------------------------------------------------------------------------------------------------------------

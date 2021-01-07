@@ -1,3 +1,26 @@
+body {
+    position: relative;
+}
+
+
+body::before {
+    content: "";
+    background-image: url(../images/PaperQuillInk.jpeg);
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    opacity: 45%
+
+}
+
+#textOpacity {
+    position: relative;
+}
+
+
 .logo {
 display: block;
   margin-left: auto;

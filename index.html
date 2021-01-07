@@ -14,29 +14,35 @@
 
 
 <body class="container">
+    <div id="textOpacity">
+    <!-- This <div> is to ensure the text does not take on the 
+        opacity of th ebackground image. While it is beneath the
+        <body> tag is must end after the <footer> even if the 
+        <footer> begins after the closing </body>.-->
     
-    <header>
-        <div><img src="./images/logo.png" alt="logo with name Daily Journal" class="logo"></div>
-    </header>
+        <header>
+            <div><img src="./images/logo.png" alt="logo with name Daily Journal" class="logo"></div>
+        </header>
 
-    <form action="" class="journalEntryForm"></form>
+        <form action="" class="journalEntryForm"></form>
     
     <!-- In the below section is where the individual entries will be placed 
         after being automated by Java -->
-    <section>
-        <div class="individualEntry"> 
-        </div>
-    </section>
+        <section>
+            <div class="individualEntry"> 
+            </div>
+        </section>
 
         
-<script type="module" src="scripts/main.js"></script>
+        <script type="module" src="scripts/main.js"></script>
 </body>
 
-<footer class="parentFooter">
-    <div class="childOfFooter">
-        <div><a href="https://github.com/MegSemrad" class="githubLink">Checkout my Github!</a></div>
-        <div class="copyright">copyright 2020 Meghan S., LLC</div>
-    </div>
-</footer>
+    <footer class="parentFooter">
+        <div class="childOfFooter">
+            <div><a href="https://github.com/MegSemrad" class="githubLink">Checkout my Github!</a></div>
+            <div class="copyright">copyright 2020 Meghan S., LLC</div>
+        </div>
+    </footer>
+</div>
 
 </html>
