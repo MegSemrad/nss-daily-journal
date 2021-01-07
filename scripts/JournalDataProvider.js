@@ -72,7 +72,7 @@ export const saveEntry = entry => {
         },
         body: JSON.stringify(entry)
     })
-    .then(getEntries)
+    // .then(getEntries)
     .then(dispatchStateChangeEvent)
 };
 /*
