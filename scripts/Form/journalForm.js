@@ -1,26 +1,21 @@
 import { saveEntry } from '../JournalDataProvider.js';
 
+
+
+// ----------------------------------------------------------------------------------------------------------------
+
+
+
 const eventHub = document.querySelector(".container");
 const contentTarget = document.querySelector(".journalEntryForm");
 
-eventHub.addEventListener("click", clickEvent => {
-    if(clickEvent.target.id === "recordButton") {
 
-        const date = document.querySelector("#journalDate").value
-        const concepts = document.querySelector(".conceptsCovered__input").value
-        const entry = document.querySelector("#journalEntry").value
-        const mood = document.querySelector(".mood__selector").value
 
-        const newEntry = {
-            date: date,
-            concepts: concepts,
-            entry: entry,
-            mood: mood
-        }
+// ----------------------------------------------------------------------------------------------------------------
 
-        saveEntry(newEntry)
-    }
-});
+/*
+    - The below function creates the HTML for the entry form 
+*/
 
 const render = () => {
     contentTarget.innerHTML = `
@@ -61,6 +56,47 @@ const render = () => {
 };
 
 
+
+// ----------------------------------------------------------------------------------------------------------------
+
+/*
+    - This function invokes the above render function 
+    - It must be imported on main.js so the form is loaded with the page
+*/
+
 export const JournalFormComponent = () => {
     render()
 };
+
+
+
+// ----------------------------------------------------------------------------------------------------------------
+
+/*
+    - This eventListener is waiting on a click event on the "Record Entry" button. 
+    - The id="recordButton" was decided in the above HTML and because this is the module
+      which holds the HTML this is also the place where the click eventListener will be
+    - the .value allows for the collecting of the data entered into the form by the user
+      the ids and classes were also decided in the above HTML
+    - That information is then placed within a new object titled "newEntry" which is then 
+      passed through saveEntry(). This function comes 
+*/
+
+eventHub.addEventListener("click", clickEvent => {
+    if(clickEvent.target.id === "recordButton") {
+
+        const date = document.querySelector("#journalDate").value
+        const concepts = document.querySelector(".conceptsCovered__input").value
+        const entry = document.querySelector("#journalEntry").value
+        const mood = document.querySelector(".mood__selector").value
+
+        const newEntry = {
+            date: date,
+            concepts: concepts,
+            entry: entry,
+            mood: mood
+        }
+
+        saveEntry(newEntry)
+    }
+});
