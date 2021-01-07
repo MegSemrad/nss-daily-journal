@@ -4,4 +4,4 @@ import { EntryList } from './JournalEntryList.js';
 
 
 JournalFormComponent();
-EntryList ();
+EntryList();
