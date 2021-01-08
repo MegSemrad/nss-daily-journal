@@ -27,6 +27,13 @@
       "concept": "HTML & CSS",
       "entry": "We automated components of Martin's Aquarium",
       "mood": "Confused"
+    },
+    {
+      "date": "2021-01-07",
+      "concept": "hello",
+      "entry": "goodbye",
+      "mood": "excited",
+      "id": 5
     }
   ]
 }
