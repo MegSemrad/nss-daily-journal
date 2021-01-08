@@ -79,9 +79,9 @@ const render = () => {
             <input type="text" class="conceptsCovered__input formStyling">
         </fieldset>
 
-        <fieldset class="journalEntry">
-            <label for="journalEntry" class="journalEntry__label">Journal Entry</label>
-            <textarea name="journalEntry" id="journalEntry" cols="30" rows="10" class="journalEntry__text formStyling"></textarea>
+        <fieldset class="entry">
+            <label for="journalEntry" class="entry__label">Journal Entry</label>
+            <textarea name="journalEntry" id="journalEntry" cols="30" rows="10" class="entry__text formStyling"></textarea>
         </fieldset>
 
         <fieldset class="mood">

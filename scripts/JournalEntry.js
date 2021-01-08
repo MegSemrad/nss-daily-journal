@@ -30,9 +30,6 @@ export const JournalEntryComponent = (entry) => {
 
 /*
     - TO DO
-    - Change "Mood" in "entries" to moodId - also make sure that is changed everywhere
-    that it could possibly be referenced 
-    - use http://localhost:8090/entries?_expand=mood
     - refactor code that built the HTML representation of a journal entry to use the 
       new structure. Instead of using, for example, ${ entryObject.mood } would need to 
       use ${ entryObject.mood.label } label would be the property name of the mood 

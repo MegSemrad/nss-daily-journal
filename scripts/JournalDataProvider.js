@@ -23,7 +23,7 @@ const dispatchStateChangeEvent = () => {
 
 
 export const getEntries = () => {
-    return fetch("http://localhost:8090/entries") 
+    return fetch("http://localhost:8090/entries?_expand=mood") 
         .then(response => response.json())  
         .then(entries => {
             console.log(entries)
@@ -65,7 +65,7 @@ journal.sort(
 
 
 export const saveEntry = entry => {
-    return fetch('http://localhost:8090/entries', {
+    return fetch('http://localhost:8090/entries?_expand=mood', {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
