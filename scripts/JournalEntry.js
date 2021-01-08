@@ -22,3 +22,27 @@ export const JournalEntryComponent = (entry) => {
     (const contentTarget = document.querySelector(".individualEntry")) part on 
     the JournalEntryList.js component 
 */
+
+
+
+
+
+
+/*
+    - TO DO
+    - Change "Mood" in "entries" to moodId - also make sure that is changed everywhere
+    that it could possibly be referenced 
+    - use http://localhost:8090/entries?_expand=mood
+    - refactor code that built the HTML representation of a journal entry to use the 
+      new structure. Instead of using, for example, ${ entryObject.mood } would need to 
+      use ${ entryObject.mood.label } label would be the property name of the mood 
+    - Need to create a moodProvider() which will have a getMoods() and a useMoods()
+    - In the form component need to use 
+    ${
+    allMoods.map(
+        (mood) => {
+            return `<option value="${ mood.id }">${ mood.label }</option>`
+        }
+    ).join("")
+}
+*/
