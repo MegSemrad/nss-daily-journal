@@ -34,6 +34,13 @@
       "entry": "goodbye",
       "mood": "excited",
       "id": 5
+    },
+    {
+      "date": "2021-01-08",
+      "concept": "howdy",
+      "entry": "see ya",
+      "mood": "confused",
+      "id": 6
     }
   ]
 }

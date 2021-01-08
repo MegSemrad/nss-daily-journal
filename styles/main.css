@@ -52,9 +52,7 @@ display: block;
     display: flex;
     font-family: 'Sawarabi Mincho', sans-serif;
 }
-.journalEntry {
-    display: flex;
-}
+
 
 .journalEntry__label{
     font-family: 'Sawarabi Mincho', sans-serif; 

@@ -1,3 +1,18 @@
+/*
+    - This module is responsible for creating the form for daily entries. 
+    - As such, it as is responsible to house the click event on the "Record Entry" 
+      button which is created in the below HTML
+*/ 
+
+
+// ----------------------------------------------------------------------------------------------------------------
+
+
+
+/*
+    - The saveEntry function is what is invoked for a new entry to be posted to the API
+*/
+
 import { saveEntry } from '../JournalDataProvider.js';
 
 
@@ -8,12 +23,13 @@ import { saveEntry } from '../JournalDataProvider.js';
 
 /*
     - This eventListener is waiting on a click event on the "Record Entry" button. 
-    - The id="recordButton" was decided in the above HTML and because this is the module
+    - The id="recordButton" was decided in the below HTML and because this is the module
       which holds the HTML this is also the place where the click eventListener will be
     - the .value allows for the collecting of the data entered into the form by the user
-      the ids and classes were also decided in the above HTML
+      the ids and classes were also decided in the below HTML
     - That information is then placed within a new object titled "newEntry" which is then 
-      passed through saveEntry(). This function comes 
+      passed through saveEntry(). This function comes JournalDataProvider.js and is responsible 
+      for POSTING a new entry to the API
 */
 
 const eventHub = document.querySelector(".container");
@@ -22,7 +38,12 @@ const contentTarget = document.querySelector(".journalEntryForm");
 eventHub.addEventListener("click", clickEvent => {
     if(clickEvent.target.id === "recordButton") {
         // clickEvent.preventDefault()
-
+        /* if wanting or needing to use .preventDefault() make sure have 
+        narrowed the scope by not adding it in eventHub but rather just a container with 
+        the form, otherwise any click event will be preventedDefault OR second option
+        is to place it in the if statement as only the button will have the specific id 
+        that the if statement outlines
+        */
         const date = document.querySelector("#journalDate").value
         const concept = document.querySelector(".conceptsCovered__input").value
         const entry = document.querySelector("#journalEntry").value

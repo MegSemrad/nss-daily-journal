@@ -72,12 +72,10 @@ export const saveEntry = entry => {
         },
         body: JSON.stringify(entry)
     })
-    // .then(getEntries)
     .then(dispatchStateChangeEvent)
 };
 /*
     - saveEntry is for when a new entry is created and must be saved to the API
     - this fetch (unlike the GET fetch) takes two arguments
-    - .then() must getEntries() again because the state has changed
     - .then() must dispatchStateChangeEvent() which will invoke function at top of module 
 */
