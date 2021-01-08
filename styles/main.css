@@ -85,3 +85,16 @@ display: block;
     text-align: center;
     width: 100%;
 }
+
+.formStyling {
+    background: rgba(240, 230, 220, 0.9);
+    font-family: 'Sawarabi Mincho', sans-serif;
+}
+
+.formFont {
+    font-family: 'Sawarabi Mincho', sans-serif;
+}
+
+footer {
+    font-family: 'Sawarabi Mincho', sans-serif;
+}

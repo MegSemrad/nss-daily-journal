@@ -39,23 +39,23 @@ eventHub.addEventListener("click", clickEvent => {
 const render = () => {
     contentTarget.innerHTML = `
         <fieldset class="date">
-            <label for="journalDate" class="date__label">Date of Entry</label>
-            <input type="date" name="journalDate" id="journalDate" class="date__input">
+            <label for="journalDate" class="date__label ">Date of Entry</label>
+            <input type="date" name="journalDate" id="journalDate" class="date__input formStyling">
         </fieldset>
     
         <fieldset class="conceptsCovered">
             <label for="conceptsCovered" class="conceptsCovered__label">Concepts Covered</label>
-            <input type="text" class="conceptsCovered__input">
+            <input type="text" class="conceptsCovered__input formStyling">
         </fieldset>
 
         <fieldset class="journalEntry">
             <label for="journalEntry" class="journalEntry__label">Journal Entry</label>
-            <textarea name="journalEntry" id="journalEntry" cols="30" rows="10" class="journalEntry__text"></textarea>
+            <textarea name="journalEntry" id="journalEntry" cols="30" rows="10" class="journalEntry__text formStyling"></textarea>
         </fieldset>
 
         <fieldset class="mood">
             <label for="mood" class="mood__label">Mood</label>
-            <select name="mood" id="" class="mood__selector">
+            <select name="mood" id="" class="mood__selector formStyling">
                 <option value="other">other</option>
                 <option value="confused">confused</option>
                 <option value="enthusiastic">enthusiastic</option>
@@ -70,7 +70,7 @@ const render = () => {
             </select>
         </fieldset>
 
-        <input type="submit" value="Record Journal Entry" id="recordButton">
+        <input type="submit" value="Record Journal Entry" id="recordButton" class="formFont">
     `
 };
 

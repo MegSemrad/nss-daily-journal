@@ -5,8 +5,8 @@ export const JournalEntryComponent = (entry) => {
             <div class="journalConcept">${entry.concept}</div>
             <div class="journalEntry">${entry.entry}</div>
             <div class="journalMood">${entry.mood}</div>
-            <input type="submit" value="Edit" class="editButton">
-            <input type="submit" value="Delete" class="deleteButton">
+            <input type="submit" value="Edit" class="editButton formFont">
+            <input type="submit" value="Delete" class="deleteButton formFont">
         </section>
     `
 }
