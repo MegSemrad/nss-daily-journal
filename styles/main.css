@@ -33,6 +33,10 @@ display: block;
     flex-direction: column;
 }
 
+.entry {
+    display: flex;
+}
+
 
 .date {
     display: flex;
