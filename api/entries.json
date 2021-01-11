@@ -2,80 +2,77 @@
   "entries": [
     {
       "id": 1,
-      "date": "07/24/2025",
+      "date": "07/24/2020",
       "concept": "HTML & CSS",
       "entry": "We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
       "moodId": 10
     },
     {
       "id": 2,
-      "date": "07/25/2025",
+      "date": "07/25/2020",
       "concept": "HTML & CSS",
       "entry": "We worked on Martin's Aquarium",
       "moodId": 5
     },
     {
       "id": 3,
-      "date": "07/26/2025",
+      "date": "07/26/2020",
       "concept": "HTML & CSS",
       "entry": "We worked on a group project",
       "moodId": 8
     },
     {
       "id": 4,
-      "date": "07/27/2025",
+      "date": "07/27/2020",
       "concept": "HTML & CSS",
       "entry": "We automated components of Martin's Aquarium",
       "moodId": 12
     }
   ],
-
-
-  
   "moods": [
     {
       "id": 2,
-      "mood": "other"
+      "emotion": "other"
     },
     {
       "id": 3,
-      "mood": "confused"
+      "emotion": "confused"
     },
     {
       "id": 4,
-      "mood": "enthusiastic"
+      "emotion": "enthusiastic"
     },
     {
       "id": 5,
-      "mood": "encouraged"
+      "emotion": "encouraged"
     },
     {
       "id": 6,
-      "mood": "excited"
+      "emotion": "excited"
     },
     {
       "id": 7,
-      "mood": "exhausted"
+      "emotion": "exhausted"
     },
     {
       "id": 8,
-      "mood": "frustrated"
+      "emotion": "frustrated"
     },
     {
       "id": 9,
-      "mood": "happy "
+      "emotion": "happy "
     },
     {
       "id": 10,
-      "mood": "neutral"
+      "emotion": "neutral"
     },
     {
       "id": 11,
-      "mood": "so-so"
+      "emotion": "so-so"
     },
     {
       "id": 12,
-      "mood": "unsure"
+      "emotion": "unsure"
     }
-]
+  ]
 }

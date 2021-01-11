@@ -9,7 +9,7 @@ let moods = [];
 export const useMoods = () => moods.slice();
 
 export const getMoods = () => {
-    return fetch("http://localhost:8090/entries?_expand=mood")
+    return fetch("http://localhost:8090/moods?")
     .then(response => response.json())
     .then(
         parsedMoods => {

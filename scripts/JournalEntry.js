@@ -4,7 +4,7 @@ export const JournalEntryComponent = (entry) => {
             <div class="journalDate">${entry.date}</div>
             <div class="journalConcept">${entry.concept}</div>
             <div class="journalEntry">${entry.entry}</div>
-            <div class="journalMood">${entry.moods.mood}</div>
+            <div class="journalMood">${entry.mood.emotion}</div>
             <input type="submit" value="Edit" class="editButton formFont">
             <input type="submit" value="Delete" class="deleteButton formFont">
         </section>
