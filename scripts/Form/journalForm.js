@@ -14,7 +14,7 @@
 */
 
 import { saveEntry } from '../JournalDataProvider.js';
-import { getMoods, useMoods } from "./moodProvider.js";
+import { getMoods, useMoods } from "../moodProvider.js";
 
 
 
@@ -38,7 +38,7 @@ const contentTarget = document.querySelector(".journalEntryForm");
 
 eventHub.addEventListener("click", clickEvent => {
     if(clickEvent.target.id === "recordButton") {
-        // clickEvent.preventDefault()
+        clickEvent.preventDefault()
         /* if wanting or needing to use .preventDefault() make sure have 
         narrowed the scope by not adding it in eventHub but rather just a container with 
         the form, otherwise any click event will be preventedDefault OR second option
@@ -48,13 +48,13 @@ eventHub.addEventListener("click", clickEvent => {
         const date = document.querySelector("#journalDate").value
         const concept = document.querySelector(".conceptsCovered__input").value
         const entry = document.querySelector("#journalEntry").value
-        const mood = document.querySelector(".mood__selector").value
+        const moodId = document.querySelector("#moodSelect").value
 
         const newEntry = {
             date: date,
             concept: concept,
             entry: entry,
-            mood: mood
+            moodId: parseInt(moodId)
         }
 
         saveEntry(newEntry)
@@ -91,7 +91,7 @@ const render = (moodCollection) => {
                 <option value="0">Mood</option>
                 ${
                     moodCollection.map((mood) => 
-                        `<option value="${ mood.id }">${ mood.label }</option>`
+                        `<option value="${ mood.id }">${ mood.emotion }</option>`
                     ).join("")
                 }
             </select>

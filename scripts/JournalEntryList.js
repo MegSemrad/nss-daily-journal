@@ -29,7 +29,7 @@ const eventHub = document.querySelector(".container");
       an entry had been saved, POSTED. Here below we are saying when the event happens invoke
       EntryList() -- scroll down to see that funciton 
 */
-eventHub.addEventListener(".entryStateChanged", () => {
+eventHub.addEventListener("entryStateChanged", () => {
     EntryList()
 });
 
