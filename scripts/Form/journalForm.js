@@ -14,6 +14,7 @@
 */
 
 import { saveEntry } from '../JournalDataProvider.js';
+import { getMoods, useMoods } from "./moodProvider.js";
 
 
 
@@ -67,7 +68,7 @@ eventHub.addEventListener("click", clickEvent => {
     - The below function creates the HTML for the entry form 
 */
 
-const render = () => {
+const render = (moodCollection) => {
     contentTarget.innerHTML = `
         <fieldset class="date">
             <label for="journalDate" class="date__label ">Date of Entry</label>
@@ -86,18 +87,13 @@ const render = () => {
 
         <fieldset class="mood">
             <label for="mood" class="mood__label">Mood</label>
-            <select name="mood" id="" class="mood__selector formStyling">
-                <option value="other">other</option>
-                <option value="confused">confused</option>
-                <option value="enthusiastic">enthusiastic</option>
-                <option value="encouraged">encouraged</option>
-                <option value="excited">excited</option>
-                <option value="exhausted">exhausted</option>
-                <option value="frustrated">frustrated</option>
-                <option value="happy">happy</option>
-                <option value="neutral">neutral</option>
-                <option value="so-so">so-so</option>
-                <option value="unsure">unsure</option>
+            <select name="mood" id="moodSelect" class="mood__selector formStyling">
+                <option value="0">Mood</option>
+                ${
+                    moodCollection.map((mood) => 
+                        `<option value="${ mood.id }">${ mood.label }</option>`
+                    ).join("")
+                }
             </select>
         </fieldset>
 
@@ -115,7 +111,11 @@ const render = () => {
 */
 
 export const JournalFormComponent = () => {
-    render()
+    getMoods()
+    .then ( () => {
+        const allMoods = useMoods()
+        render(allMoods)
+    })
 };
 
 
