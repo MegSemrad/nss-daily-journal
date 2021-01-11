@@ -9,7 +9,7 @@ export const JournalEntryComponent = (entry) => {
             <input type="submit" value="Delete" class="deleteButton formFont">
         </section>
     `
-}
+};
 
 /*
     - Purpose: To render a single journal entry as an HTML representation of the data
@@ -21,23 +21,4 @@ export const JournalEntryComponent = (entry) => {
     with a class which was called in the 
     (const contentTarget = document.querySelector(".individualEntry")) part on 
     the JournalEntryList.js component 
-*/
-
-
-
-
-/*
-    - TO DO
-    - refactor code that built the HTML representation of a journal entry to use the 
-      new structure. Instead of using, for example, ${ entryObject.mood } would need to 
-      use ${ entryObject.mood.label } label would be the property name of the mood 
-    - Need to create a moodProvider() which will have a getMoods() and a useMoods()
-    - In the form component need to use 
-    ${
-    allMoods.map(
-        (mood) => {
-            return `<option value="${ mood.id }">${ mood.label }</option>`
-        }
-    ).join("")
-}
 */
