@@ -79,3 +79,16 @@ export const saveEntry = entry => {
     - this fetch (unlike the GET fetch) takes two arguments
     - .then() must dispatchStateChangeEvent() which will invoke function at top of module 
 */
+
+
+
+
+// Must have the entryId on there so does not delete everything 
+
+export const deleteEntry = entryId => {
+    return fetch(`http://localhost:8090/entries?_expand=mood/${entryId}`, {
+        method: "DELETE"
+    })
+        .then(getEntries)
+        .then(dispatchStateChangeEvent)
+};
